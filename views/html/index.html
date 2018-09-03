@@ -1,0 +1,87 @@
+<html>
+    <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+        <link href="/css/main.css" rel='stylesheet'/>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            a { text-decoration: none; color: #323232; }
+            *{font-size:0.14rem;}
+            body{background-color:#FFF;}
+
+             .alert_msg {
+                display: none;
+                width: 40%;
+                padding: 0.18rem 0;
+                position: fixed;
+                top: 36%;
+                left: 0;
+                right: 0;
+                margin: auto;
+                background-color: black;
+                border-radius: 3px;
+                opacity: 0.5;
+                line-height: 1.2;
+                text-align: center;
+                font-size: 0.18rem;
+                color: #fff;
+            }
+            .alert_msg p {
+                padding: 0 0.1rem;
+                word-wrap: break-word;
+                word-break: normal;
+            }
+            [v-cloak]{
+                display:none;
+            }
+            input,button{-webkit-appearance:none;}
+        </style>
+        <script src="/js/sys/mobile.js"></script>
+        <script src="/js/sys/vue.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+ <script>
+            // window.onerror=function(e){
+            //     alert(e)
+            // }
+
+        </script>
+    </head>
+    <body>
+        <header id="header">
+            
+        </header>
+
+        <article id="main">
+            
+        </article>
+        <footer id="footer">
+
+        </footer>
+        
+        <div class="alert_msg">
+            <p></p>
+        </div>
+    </body>
+    <script src="/js/sys/router.js?v=0.08"></script>
+    <!-- <script src="/scripts/shared/newsLayout.js"></script> -->
+    <script>
+
+        function _alert(msg,callback,times){
+            $(".alert_msg p").html(msg);
+            $(".alert_msg").show();
+            if(times!=-1)
+                setTimeout(function(){
+                    $(".alert_msg").hide()
+                    if(callback)
+                        callback();
+                }, times?times:2000);
+        }
+        window.ver=location.search.substr(location.search.indexOf('v=')+2)
+        window.linkTo();
+
+
+    </script>
+</html>

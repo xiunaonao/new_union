@@ -1,0 +1,4 @@
+node_modules
+/uploads_temp
+/public/temp/*
+dataServer.json
