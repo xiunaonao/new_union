@@ -1,24 +1,69 @@
 
 <div class="news_box">
 	<div class="news_top_btn">
-		<span class="click_news_btn">下城区总工会<span class="left_bot_icon"></span></span>
-		<span class="click_news_btn">经纬创意园<span class="left_bot_icon"></span></span>
-		<span class="click_news_btn">杭州泓唛<span class="left_bot_icon"></span></span>
+		<span v-bind:class="is_orgBtn01==true?'click_news_btn':''" v-on:click="clickOrganizeBtn(true,1)">下城区总工会<span v-if="is_orgBtn01" class="left_bot_icon"></span></span>
+		<span  v-bind:class="is_orgBtn02==true?'click_news_btn':''" v-on:click="clickOrganizeBtn(true,2)">经纬创意园<span v-if="is_orgBtn02" class="left_bot_icon"></span></span>
+		<span  v-bind:class="is_orgBtn03==true?'click_news_btn':''" v-on:click="clickOrganizeBtn(true,3)">杭州泓唛<span v-if="is_orgBtn03" class="left_bot_icon"></span></span>
 	</div>
 	
 	<div class="news_main">
 		<div class="news_mian_title">
-			<div><span class="click_main_title">工会头条</span></div>
-			<div><span>优惠普惠</span></div>
-			<div><span>工会活动</span></div>
-			<div><span>先模服务</span></div>
+			<div><span v-bind:class="is_typeBtn01?'click_main_title':''" v-on:click="clickOrganizeBtn(false,1)">工会头条</span></div>
+			<div><span v-bind:class="is_typeBtn02?'click_main_title':''" v-on:click="clickOrganizeBtn(false,2)">优惠普惠</span></div>
+			<div><span v-bind:class="is_typeBtn03?'click_main_title':''" v-on:click="clickOrganizeBtn(false,3)">工会活动</span></div>
+			<div><span v-bind:class="is_typeBtn04?'click_main_title':''" v-on:click="clickOrganizeBtn(false,4)">先模服务</span></div>
 		</div>
 		
 		<div class="news_main_info">
+			
+			<div class="swiper-container">
+			    <div class="swiper-wrapper">
+			      	<div class="swiper-slide">
+			      		<img src="/img/raw_1534916432.png" alt="" />
+			      		<p class="slide_img_title">下城新闻第三十五期下城新闻第三十五期下城新闻第三十五期下城新闻第三十五期下城新闻第三十五期下城新闻第三十五期</p>
+			      	</div>
+			      	<div class="swiper-slide">
+			      		<img src="/img/raw_1534916621.png" alt="" />
+			      		<p class="slide_img_title">下城新闻第三十六期</p>
+			      	</div>
+			      	<div class="swiper-slide">
+			      		<img src="/img/raw_1534916762.png" alt="" />
+			      		<p class="slide_img_title">下城新闻第三十七期</p>
+			      	</div>
+			    </div>
+			    <!-- Add Pagination -->
+			    <div class="swiper-pagination" style="bottom: -0.15rem;"></div>
+		  	</div>
+			
 			<ul class="news_main_list">
 				<li>
 					<div class="news_li_left">
 						<p>我区召开面向“双一流”高校引进党政储备人才面试考核工作筹备会议</p>
+						<span>阅读 17</span>
+					</div>
+					
+					<img src="/img/raw_1534916432.png" alt="" />
+				</li>
+				<li>
+					<div class="news_li_left">
+						<p>我区召开面向“双一流”高校引进党政储备人才面试考核工作筹备会议</p>
+						<span>阅读 17</span>
+					</div>
+					
+					<img src="/img/raw_1534916432.png" alt="" />
+				</li>
+				<li>
+					<div class="news_li_left">
+						<p>我区召开面向“双一流”高校引进党政储备人才面试考核工作筹备会议</p>
+						<span>阅读 17</span>
+					</div>
+					
+					<img src="/img/raw_1534916432.png" alt="" />
+				</li>
+				<li>
+					<div class="news_li_left">
+						<p>我区召开面向“双一流”高校引进党政储备人才面试考核工作筹备会议</p>
+						<span>阅读 17</span>
 					</div>
 					
 					<img src="/img/raw_1534916432.png" alt="" />
